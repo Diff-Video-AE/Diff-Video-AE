@@ -170,27 +170,37 @@
       <div class="column">
         <br>
         <div class="section-title">
-          <h2 class="title is-3 is-centered">Comparison of temporal consistency for "beard"</h2>
+          <h2 class="title is-3 is-centered">Comparison of Temporal Consistency for "beard"</h2>
         </div>
         <br>
-        <div class="container">
-          <div class="columns is-centered has-text-centered">
-            <div class="column">
-              <video id="compare_beard" autoplay controls loop muted height="100%">
-                <source src="static/videos/Comparison_video.mov"
-                        type="video/mp4">
-              </video>
-              <br>
-              <br>
-              <h2 class="subtitle has-text-centered"><b>We demonstrate that only our diffusion video autoencoder successfully produces the consistent result.</b></h2>
-            </div>
-          </div>
+        <video id="compare_beard" autoplay controls loop muted width="100%">
+          <source src="static/videos/Comparison_video.mp4"
+                  type="video/mp4">
+        </video>
+        <div class="columns vertical_center">
+          <div class="column is-one-fifths"><div class="columns"><div class="column">
+            <p>Original</p>
+          </div></div></div>
+          <div class="column is-one-fifths"><div class="columns"><div class="column">
+            <p>Latent Transformer</p>
+          </div></div></div>
+          <div class="column is-one-fifths"><div class="columns"><div class="column">
+            <p>STIT</p>
+          </div></div></div>
+          <div class="column is-one-fifths"><div class="columns"><div class="column">
+            <p>VideoEditGAN</p>
+          </div></div></div>
+          <div class="column is-one-fifths"><div class="columns"><div class="column">
+            <p>Ours</p>
+          </div></div></div>
         </div>
+        <h2 class="subtitle has-text-centered"><b>We demonstrate that only our diffusion video autoencoder successfully produces the consistent result.</b></h2>
         <br>
       </div>  
     </div>
   </div>
 </section>
+
 
 <!-- Additional Examples -->
 <section class="hero is-light">
@@ -201,58 +211,177 @@
         <div class="section-title">
           <h2 class="title is-3 is-centered" id="additional">Additional Examples</h2>
         </div>
-        <p>
-          They are source video, ours, and baseline(STIT) respectively. 
-        </p>
         <div class="publication-video-small">
-          <video id="beard" autoplay controls loop muted height="100%">
+          <h2 class="subtitle has-text-centered">+Beard</h2>
+          <video id="beard" autoplay controls loop muted width="60%">
             <source src="static/videos/+Beard_CLIP.mp4"
                     type="video/mp4">
           </video>
-          <h2 class="subtitle has-text-centered">+Beard</h2>
-          <video id="eyeglasses" autoplay controls loop muted height="100%">
-           <source src="static/videos/+Eyeglasses_CLIP.mp4"
-                   type="video/mp4">
-          </video>
+          <div class="columns vertical_center">
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p></p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Original</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>STIT</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Ours</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p></p>
+            </div></div></div>
+          </div>
+          <br>
           <h2 class="subtitle has-text-centered">+Eyeglasses</h2>
-          <video id="mustache" autoplay controls loop muted height="100%">
+          <video id="eyeglasses" autoplay controls loop muted width="60%">
+          <source src="static/videos/+Eyeglasses_CLIP.mp4"
+                  type="video/mp4">
+          </video>
+          <div class="columns vertical_center">
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p></p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Original</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>STIT</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Ours</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p></p>
+            </div></div></div>
+          </div>
+          <br>
+          <h2 class="subtitle has-text-centered">+Mustache</h2>
+          <video id="mustache" autoplay controls loop muted width="60%">
             <source src="static/videos/+Mustache_CLIP.mp4"
                     type="video/mp4">
-           </video>
-          <h2 class="subtitle has-text-centered">+Mustache</h2>
+          </video>
+          <div class="columns vertical_center">
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p></p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Original</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>STIT</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Ours</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p></p>
+            </div></div></div>
+          </div>
           <h2 class="subtitle has-text-centered"><b>Our method shows temporally consistent results.</b></h2>
         </div>
+        <br>
         <div class="publication-video-small">
-          <video id="occluded" autoplay controls loop muted height="100%">
+          <h2 class="subtitle has-text-centered">+Beard</h2>
+          <video id="occluded" autoplay controls loop muted width="60%">
             <source src="static/videos/+Beard_occluded.mp4"
                     type="video/mp4">
           </video>
-          <h2 class="subtitle has-text-centered">+Beard</h2>
+          <div class="columns vertical_center">
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p></p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Original</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>STIT</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Ours</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p></p>
+            </div></div></div>
+          </div>
           <h2 class="subtitle has-text-centered"><b>Our method also robustly reconstructs and edits the unusual case such as the hand-occluded face effectively.</b></h2>
         </div>
+        <br>
         <div class="publication-video-small">
-          <video id="sideburns" autoplay controls loop muted height="100%">
+          <h2 class="subtitle has-text-centered">-Sideburns</h2>
+          <video id="sideburns" autoplay controls loop muted width="60%">
             <source src="static/videos/-Sideburns_Classifier_long.mp4"
                     type="video/mp4">
           </video>
-          <h2 class="subtitle has-text-centered">-Sideburns</h2>
+          <div class="columns vertical_center">
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p></p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Original</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>STIT</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Ours</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p></p>
+            </div></div></div>
+          </div>
           <h2 class="subtitle has-text-centered"><b>Moreover, entire frames of long video can be edited at once by modifying the single identity feature.</b></h2>
         </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Inference Time -->
+<section class="hero">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column">
+        <br>
+        <div class="section-title">
+          <h2 class="title is-3 is-centered" id="additional">Inference Time Comparison</h2>
+        </div>
         <div class="publication-video-small">
-          <video id="sampler" autoplay controls loop muted height="100%">
-            <source src="static/videos/+Beards_sampler.mp4"
+          <video id="sampler" autoplay controls loop muted width="100%">
+            <source src="static/videos/Comparison_time.mp4"
                     type="video/mp4">
           </video>
-          <h2 class="subtitle has-text-centered">[original, ours (T=100), ours (+Sampler)]</h2>
+          <div class="columns vertical_center">
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Original</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>STIT<br>12.0 sec/frame</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Ours (T=1000)<br>62.4 sec/frame</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Ours (T=100)<br>7.3 sec/frame</p>
+            </div></div></div>
+            <div class="column is-one-fifths"><div class="columns"><div class="column">
+              <p>Ours (+Sampler)<br>2.9 sec/frame</p>
+            </div></div></div>
+          </div>
           <h2 class="subtitle has-text-centered"><b>Furthermore, our method can utilize ODE samplers to reduce time with comparable quality.</b></h2>
         </div>
+        <br>
       </div>
     </div>
   </div>
 </section>
 
 
-<section class="section" id="BibTeX">
+<section class="hero is-light" id="BibTeX">
+  <br>
   <div class="container content">
     <h2 class="title">BibTeX</h2>
     <p>If you find our work useful, please cite our paper:</p>
