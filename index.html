@@ -122,7 +122,7 @@
               </span>
               <!-- Slides Link. -->
               <span class="link-block">
-                <a href="https://github.com/Diff-Video-AE/Diff-Video-AE.github.io/tree/main/static/images/slides.pdf?raw=true"
+                <a href="https://cvpr2023.thecvf.com/media/cvpr-2023/Slides/21044.pdf"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -190,9 +190,8 @@
           Afterward, by using $z_{\text{face}}$ as a condition, the forward process of the diffusion model results in the noise map $x_T$, where only the background information remains since all facial-related information is encoded in the condition. 
           To achieve perfect decomposition of identity, motion, and background information, we use a pre-trained (identity, landmark) encoder that can extract each feature without training it. 
           We modify the representative identity feature, compute a new facial-related feature $z_{\text{face}}^{\text{edit}}$, and then proceed with the reverse process to perform editing.
-
           To train our model, we use two objectives. 
-          The first is the existing DDPM loss (simple loss), which learns the distribution of face video frames by predicting the noise used in each batch. 
+          The first is the simple existing DDPM loss, which learns the distribution of face video frames by predicting the noise used in each batch. 
           The second is the regularization loss, which helps ensure clear decomposition between the background and face information. 
           When estimating original images from noisy images generated using different noises, we minimize the difference in the facial parts.
         </div>
