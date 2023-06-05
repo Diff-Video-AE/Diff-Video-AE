@@ -24,6 +24,12 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({            
+        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}            
+    });
+  </script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
 </head>
 <body>
 
@@ -116,7 +122,7 @@
               </span>
               <!-- Slides Link. -->
               <span class="link-block">
-                <a href="https://github.com/Diff-Video-AE/Diff-Video-AE.github.io/tree/main/static/images/slides.pdf"
+                <a href="https://github.com/Diff-Video-AE/Diff-Video-AE.github.io/tree/main/static/images/slides.pdf?raw=true"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
@@ -162,22 +168,42 @@
         <br>
       </div>
     </div>
-    <!-- <div class="container">
-      <div class="columns is-centered has-text-centered">
-        <div class="column">
-          <img src="static/images/overview.png"/>
-          <br>
-          <h2 class="subtitle has-text-centered">Overview of our Diffusion Video Autoencoder.</h2>
-          <br>
-        </div>
-      </div>
-    </div> -->
   </div>
 </section>
 
+<!-- Method overview -->
+<section class="hero">
+  <div class="container">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <br>
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="column">
+          <img src="static/images/overview.pdf"/>
+          <br>
+          <h2 class="subtitle has-text-centered">Overview of our Diffusion Video Autoencoder</h2>
+        </div>
+        <br>
+        <div class="content has-text-justified">
+          Our diffusion video autoencoder encode each frame into facial-related feature $z_{\text{face}}$ and a noise map $x_T$ containing background information. 
+          Facial-related feature $z_{\text{face}}$ consists of representative identity feature which is calculated by averaging the identity feature of all frames, and corresponding frame's motion feature. 
+          Afterward, by using $z_{\text{face}}$ as a condition, the forward process of the diffusion model results in the noise map $x_T$, where only the background information remains since all facial-related information is encoded in the condition. 
+          To achieve perfect decomposition of identity, motion, and background information, we use a pre-trained (identity, landmark) encoder that can extract each feature without training it. 
+          We modify the representative identity feature, compute a new facial-related feature $z_{\text{face}}^{\text{edit}}$, and then proceed with the reverse process to perform editing.
+
+          To train our model, we use two objectives. 
+          The first is the existing DDPM loss (simple loss), which learns the distribution of face video frames by predicting the noise used in each batch. 
+          The second is the regularization loss, which helps ensure clear decomposition between the background and face information. 
+          When estimating original images from noisy images generated using different noises, we minimize the difference in the facial parts.
+        </div>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Comparisons -->
-<section class="hero">
+<section class="hero is-light">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column">
@@ -216,7 +242,7 @@
 
 
 <!-- Additional Examples -->
-<section class="hero is-light">
+<section class="hero">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column">
@@ -354,7 +380,7 @@
 </section>
 
 <!-- Inference Time -->
-<section class="hero">
+<section class="hero is-light">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column">
@@ -393,7 +419,7 @@
 </section>
 
 
-<section class="hero is-light" id="BibTeX">
+<section class="hero" id="BibTeX">
   <br>
   <div class="container content">
     <h2 class="title">BibTeX</h2>
